@@ -7,7 +7,7 @@
 A Chrome extension that allows you to view Power Automate flow run history directly from Dynamics 365 records.
 
 <p align="center">
-  <img src="screenshots/main-panel.png" alt="Extension Screenshot" width="400">
+  <img src="screenshots/main-panel.png" alt="Extension Screenshot" width="350">
 </p>
 
 ## :fire: Why This Extension?
@@ -54,15 +54,15 @@ Results appear as they're found - no waiting for the entire search to complete.
 <table>
   <tr>
     <td align="center">
-      <img src="screenshots/main-panel.png" alt="Main Panel" width="280"><br>
+      <img src="screenshots/main-panel.png" alt="Main Panel" width="250"><br>
       <em>Main Panel</em>
     </td>
     <td align="center">
-      <img src="screenshots/run-history.png" alt="Run History" width="280"><br>
+      <img src="screenshots/run-history.png" alt="Run History" width="250"><br>
       <em>Run History</em>
     </td>
     <td align="center">
-      <img src="screenshots/setup-dialog.png" alt="Setup" width="280"><br>
+      <img src="screenshots/setup-dialog.png" alt="Setup" width="250"><br>
       <em>Setup Configuration</em>
     </td>
   </tr>
@@ -105,9 +105,7 @@ You need an Azure AD App Registration to use the record-specific run search feat
 
 After creating the app, copy the **Application (client) ID** and **Directory (tenant) ID** from the Overview page:
 
-<p align="center">
-  <img src="screenshots/ClientId-TenantId.png" alt="Client ID and Tenant ID" width="600">
-</p>
+<img src="screenshots/ClientId-TenantId.png" alt="Client ID and Tenant ID" width="500">
 
 ### Step 3: Configure API Permissions
 
@@ -115,32 +113,24 @@ The extension needs permission to access Power Automate APIs.
 
 1. Go to **API permissions** > Click **Add a permission**
 
-<p align="center">
-  <img src="screenshots/APIPermissions1.png" alt="API Permissions Step 1" width="600">
-</p>
+<img src="screenshots/APIPermissions1.png" alt="API Permissions Step 1" width="500">
 
 2. Select **Power Automate** (or search for "Flow Service") and add the required permissions:
 
-<p align="center">
-  <img src="screenshots/APIPermissions2.png" alt="API Permissions Step 2" width="600">
-</p>
+<img src="screenshots/APIPermissions2.png" alt="API Permissions Step 2" width="500">
 
 ### Step 4: Configure Authentication (Redirect URI)
 
 1. Go to **Authentication** > Click **Add a platform**
 
-<p align="center">
-  <img src="screenshots/Authentication1.png" alt="Authentication Step 1" width="600">
-</p>
+<img src="screenshots/Authentication1.png" alt="Authentication Step 1" width="500">
 
 2. Select **Web** and enter your extension's redirect URI:
    ```
    https://<your-extension-id>.chromiumapp.org/
    ```
 
-<p align="center">
-  <img src="screenshots/Authentication2.png" alt="Authentication Step 2" width="600">
-</p>
+<img src="screenshots/Authentication2.png" alt="Authentication Step 2" width="500">
 
 ### Finding Your Extension ID
 
