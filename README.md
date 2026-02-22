@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-green.svg)](https://developer.chrome.com/docs/extensions/mv3/)
 
-A Chrome extension that allows you to view Power Automate flow run history directly from Dynamics 365 records.
+A browser extension for **Chrome** and **Edge** that allows you to view Power Automate flow run history directly from Dynamics 365 records.
 
 <p align="center">
   <img src="screenshots/main-panel.png" alt="Extension Screenshot" width="350">
@@ -72,13 +72,24 @@ Results appear as they're found - no waiting for the entire search to complete.
 
 ## :rocket: Installation
 
-### From Chrome Web Store (Recommended)
+### From Chrome Web Store (Chrome & Edge)
 *Coming Soon*
 
+> :bulb: **Edge Users:** You can install this extension directly from the Chrome Web Store. Go to `edge://extensions/`, enable "Allow extensions from other stores", then install from Chrome Web Store.
+
 ### Manual Installation (Developer Mode)
+
+#### Chrome
 1. Download or clone this repository
 2. Open Chrome and navigate to `chrome://extensions/`
 3. Enable **Developer mode** (toggle in top-right)
+4. Click **Load unpacked**
+5. Select the extension folder
+
+#### Microsoft Edge
+1. Download or clone this repository
+2. Open Edge and navigate to `edge://extensions/`
+3. Enable **Developer mode** (toggle in bottom-left)
 4. Click **Load unpacked**
 5. Select the extension folder
 
@@ -134,7 +145,13 @@ The extension needs permission to access Power Automate APIs.
 
 ### Finding Your Extension ID
 
+#### Chrome
 1. Go to `chrome://extensions/`
+2. Find "Dynamics 365 Flow History"
+3. Copy the ID shown below the extension name
+
+#### Microsoft Edge
+1. Go to `edge://extensions/`
 2. Find "Dynamics 365 Flow History"
 3. Copy the ID shown below the extension name
 
