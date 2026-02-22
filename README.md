@@ -8,18 +8,18 @@ A Chrome extension that allows you to view Power Automate flow run history direc
 
 ![Extension Screenshot](screenshots/main-panel.png)
 
-## ? Features
+## :sparkles: Features
 
-- **?? Flow Discovery** - Automatically finds all flows related to the current record
-- **?? Three View Modes**:
+- :mag: **Flow Discovery** - Automatically finds all flows related to the current record
+- :bar_chart: **Three View Modes**:
   - **Triggered By** - Flows that trigger when this record changes
   - **Modified By** - Flows that update this record
   - **Read By** - Flows that retrieve this record
-- **?? Record-Specific Runs** - Search flow runs for the specific record you're viewing
-- **? Real-time Streaming** - Results appear as they're found
-- **?? Secure Authentication** - Uses your Azure AD credentials via OAuth 2.0
+- :dart: **Record-Specific Runs** - Search flow runs for the specific record you're viewing
+- :zap: **Real-time Streaming** - Results appear as they're found
+- :lock: **Secure Authentication** - Uses your Azure AD credentials via OAuth 2.0
 
-## ?? Screenshots
+## :camera: Screenshots
 
 ### Main Panel
 ![Main Panel](screenshots/main-panel.png)
@@ -33,7 +33,7 @@ A Chrome extension that allows you to view Power Automate flow run history direc
 ![Setup](screenshots/setup-dialog.png)
 *Initial configuration dialog*
 
-## ?? Installation
+## :rocket: Installation
 
 ### From Chrome Web Store (Recommended)
 *Coming Soon*
@@ -45,14 +45,14 @@ A Chrome extension that allows you to view Power Automate flow run history direc
 4. Click **Load unpacked**
 5. Select the extension folder
 
-## ?? Configuration
+## :gear: Configuration
 
 ### Prerequisites
 You need an Azure AD App Registration to use the record-specific run search feature.
 
 ### Azure AD Setup
 1. Go to [Azure Portal](https://portal.azure.com)
-2. Navigate to **Azure Active Directory** ? **App registrations**
+2. Navigate to **Azure Active Directory** > **App registrations**
 3. Click **New registration**
 4. Configure:
    - **Name**: `Flow History Extension` (or your choice)
@@ -72,12 +72,12 @@ You need an Azure AD App Registration to use the record-specific run search feat
 
 ### Extension Configuration
 1. Click the extension icon on a Dynamics 365 page
-2. Click the ?? gear icon
+2. Click the :gear: gear icon
 3. Enter your **Azure AD Client ID**
 4. (Optional) Enter your **Tenant ID** or leave blank for "common"
 5. Click **Save Settings**
 
-## ?? Usage
+## :book: Usage
 
 1. Navigate to any Dynamics 365 record
 2. Click the extension icon in Chrome toolbar
@@ -92,27 +92,27 @@ You need an Azure AD App Registration to use the record-specific run search feat
    - **Recent Failed** - Recent failed runs
    - **Failed (This)** - Failed runs for this record
 
-## ?? Privacy
+## :closed_lock_with_key: Privacy
 
 This extension:
-- ? Stores configuration locally only
-- ? Does NOT collect personal data
-- ? Does NOT track usage analytics
-- ? Only communicates with Microsoft services
+- :white_check_mark: Stores configuration locally only
+- :white_check_mark: Does NOT collect personal data
+- :white_check_mark: Does NOT track usage analytics
+- :white_check_mark: Only communicates with Microsoft services
 
 See [PRIVACY.md](PRIVACY.md) for full details.
 
-## ??? Development
+## :wrench: Development
 
 ### Project Structure
 ```
 ??? manifest.json          # Extension manifest (V3)
 ??? background.js          # Service worker (API calls, auth)
-??? injector.js           # Content script bridge (ISOLATED world)
-??? main_world_script.js  # Main UI & logic (MAIN world)
-??? popup.html/js         # Extension popup
-??? settings.html/js      # Options page
-??? icons/                # Extension icons
+??? injector.js            # Content script bridge (ISOLATED world)
+??? main_world_script.js   # Main UI & logic (MAIN world)
+??? popup.html/js          # Extension popup
+??? settings.html/js       # Options page
+??? icons/                 # Extension icons
 ```
 
 ### Building
@@ -124,22 +124,22 @@ No build step required - this is a vanilla JavaScript extension.
 3. Click the extension icon
 4. See [TESTING_GUIDE.md](TESTING_GUIDE.md) for detailed testing steps
 
-## ?? Changelog
+## :memo: Changelog
 
 See [CHANGELOG.md](CHANGELOG.md) for version history.
 
-## ?? License
+## :page_facing_up: License
 
 This project is licensed under the MIT License - see [LICENSE](LICENSE) for details.
 
-## ?? Contributing
+## :handshake: Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## ?? Disclaimer
+## :warning: Disclaimer
 
 This extension is not affiliated with, endorsed by, or sponsored by Microsoft Corporation.
 
 ---
 
-**Made with ?? for the Dynamics 365 Community**
+**Made with :heart: for the Dynamics 365 Community**
