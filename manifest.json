@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Dynamics 365 Flow History",
+  "version": "2.2",
+  "description": "View Power Automate Flow history for the current Dynamics 365 record.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "cookies",
+    "identity"
+  ],
+  "host_permissions": [
+    "https://*.crm.dynamics.com/*",
+    "https://*.dynamics.com/*",
+    "https://make.powerautomate.com/*",
+    "https://*.flow.microsoft.com/*",
+    "https://login.microsoftonline.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Show Flow History"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.crm.dynamics.com/*",
+        "https://*.dynamics.com/*"
+      ],
+      "js": [
+        "injector.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_page": "settings.html"
+}

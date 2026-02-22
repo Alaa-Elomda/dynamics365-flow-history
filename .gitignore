@@ -1,0 +1,40 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Build artifacts
+node_modules/
+dist/
+build/
+*.zip
+
+# Logs
+*.log
+npm-debug.log*
+
+# Backup files
+*_backup.*
+*.bak
+*.backup
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Package files (if using npm for tooling)
+package-lock.json
