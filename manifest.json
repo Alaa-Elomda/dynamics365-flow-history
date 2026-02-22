@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Dynamics 365 Flow History",
   "version": "2.2",
-  "description": "View Power Automate Flow history for the current Dynamics 365 record. Find record-specific runs instantly and debug directly in Power Automate.",
+  "description": "View Power Automate flow runs for Dynamics 365 records. Find record-specific runs instantly.",
   "permissions": [
     "activeTab",
     "scripting",
