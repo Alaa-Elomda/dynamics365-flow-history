@@ -10,16 +10,44 @@ A Chrome extension that allows you to view Power Automate flow run history direc
   <img src="screenshots/main-panel.png" alt="Extension Screenshot" width="400">
 </p>
 
-## :sparkles: Features
+## :fire: Why This Extension?
 
-- :mag: **Flow Discovery** - Automatically finds all flows related to the current record
-- :bar_chart: **Three View Modes**:
-  - **Triggered By** - Flows that trigger when this record changes
-  - **Modified By** - Flows that update this record
-  - **Read By** - Flows that retrieve this record
-- :dart: **Record-Specific Runs** - Search flow runs for the specific record you're viewing
-- :zap: **Real-time Streaming** - Results appear as they're found
-- :lock: **Secure Authentication** - Uses your Azure AD credentials via OAuth 2.0
+**The Problem:** In production environments, when a Power Automate flow fails for a specific Dynamics 365 record, finding that exact run in Power Automate is painful. You have to:
+1. Open Power Automate
+2. Find the flow
+3. Scroll through hundreds/thousands of runs
+4. Manually check each run to find the one related to your record
+
+**The Solution:** This extension finds flow runs **for the specific record you're viewing** in seconds, and lets you **open them directly in Power Automate** to debug the issue.
+
+> :stopwatch: **Save hours of troubleshooting time** - No more searching through thousands of flow runs!
+
+---
+
+## :star2: Key Features
+
+### :dart: Record-Specific Run Search
+The most powerful feature - find flow runs that are **specifically related to the record you're viewing**:
+- **This Record** - Finds all runs triggered by or affecting THIS specific record
+- **Failed (This)** - Instantly find failed runs for THIS record only
+
+### :link: One-Click Open in Power Automate
+Every flow run can be **opened directly in Power Automate** with a single click. See exactly:
+- What triggered the flow
+- Which actions succeeded or failed
+- Error messages and details
+- Input/output data for each step
+
+### :mag: Flow Discovery
+Automatically finds all flows related to the current record:
+- **Triggered By** - Flows that trigger when this record changes
+- **Modified By** - Flows that update this record  
+- **Read By** - Flows that retrieve this record
+
+### :zap: Real-time Streaming
+Results appear as they're found - no waiting for the entire search to complete.
+
+---
 
 ## :camera: Screenshots
 
@@ -40,6 +68,8 @@ A Chrome extension that allows you to view Power Automate flow run history direc
   </tr>
 </table>
 
+---
+
 ## :rocket: Installation
 
 ### From Chrome Web Store (Recommended)
@@ -51,6 +81,8 @@ A Chrome extension that allows you to view Power Automate flow run history direc
 3. Enable **Developer mode** (toggle in top-right)
 4. Click **Load unpacked**
 5. Select the extension folder
+
+---
 
 ## :gear: Configuration
 
@@ -84,6 +116,8 @@ You need an Azure AD App Registration to use the record-specific run search feat
 4. (Optional) Enter your **Tenant ID** or leave blank for "common"
 5. Click **Save Settings**
 
+---
+
 ## :book: Usage
 
 1. Navigate to any Dynamics 365 record
@@ -94,10 +128,17 @@ You need an Azure AD App Registration to use the record-specific run search feat
    - **Modified By** - Flows that update this entity
    - **Read By** - Flows that read this entity
 5. Click buttons to view run history:
-   - **Recent Runs** - All recent runs (from Dataverse)
-   - **This Record** - Runs related to THIS specific record
-   - **Recent Failed** - Recent failed runs
-   - **Failed (This)** - Failed runs for this record
+
+| Button | Description |
+|--------|-------------|
+| **Recent Runs** | All recent runs (from Dataverse) |
+| **This Record** | :star: Runs related to THIS specific record |
+| **Recent Failed** | Recent failed runs |
+| **Failed (This)** | :star: Failed runs for THIS record only |
+
+6. Click the **?** link on any run to **open it directly in Power Automate** for detailed debugging
+
+---
 
 ## :closed_lock_with_key: Privacy
 
@@ -108,6 +149,8 @@ This extension:
 - :white_check_mark: Only communicates with Microsoft services
 
 See [PRIVACY.md](PRIVACY.md) for full details.
+
+---
 
 ## :wrench: Development
 
@@ -130,6 +173,8 @@ No build step required - this is a vanilla JavaScript extension.
 2. Navigate to a Dynamics 365 record
 3. Click the extension icon
 4. See [TESTING_GUIDE.md](TESTING_GUIDE.md) for detailed testing steps
+
+---
 
 ## :memo: Changelog
 
