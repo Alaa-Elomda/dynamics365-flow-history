@@ -6,7 +6,9 @@
 
 A Chrome extension that allows you to view Power Automate flow run history directly from Dynamics 365 records.
 
-![Extension Screenshot](screenshots/main-panel.png)
+<p align="center">
+  <img src="screenshots/main-panel.png" alt="Extension Screenshot" width="400">
+</p>
 
 ## :sparkles: Features
 
@@ -21,17 +23,22 @@ A Chrome extension that allows you to view Power Automate flow run history direc
 
 ## :camera: Screenshots
 
-### Main Panel
-![Main Panel](screenshots/main-panel.png)
-*The Flow Monitor panel showing flows triggered by the current record*
-
-### Flow Run History
-![Run History](screenshots/run-history.png)
-*Viewing run history for a specific flow*
-
-### Setup Configuration
-![Setup](screenshots/setup-dialog.png)
-*Initial configuration dialog*
+<table>
+  <tr>
+    <td align="center">
+      <img src="screenshots/main-panel.png" alt="Main Panel" width="280"><br>
+      <em>Main Panel</em>
+    </td>
+    <td align="center">
+      <img src="screenshots/run-history.png" alt="Run History" width="280"><br>
+      <em>Run History</em>
+    </td>
+    <td align="center">
+      <img src="screenshots/setup-dialog.png" alt="Setup" width="280"><br>
+      <em>Setup Configuration</em>
+    </td>
+  </tr>
+</table>
 
 ## :rocket: Installation
 
