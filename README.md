@@ -1,4 +1,4 @@
-# Dynamics 365 Flow History Extension
+﻿# Dynamics 365 Flow History Extension
 
 [![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Coming%20Soon-blue?logo=googlechrome)](https://chrome.google.com/webstore)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -89,7 +89,8 @@ Results appear as they're found - no waiting for the entire search to complete.
 ### Prerequisites
 You need an Azure AD App Registration to use the record-specific run search feature.
 
-### Azure AD Setup
+### Step 1: Create Azure AD App Registration
+
 1. Go to [Azure Portal](https://portal.azure.com)
 2. Navigate to **Azure Active Directory** > **App registrations**
 3. Click **New registration**
@@ -98,18 +99,57 @@ You need an Azure AD App Registration to use the record-specific run search feat
    - **Supported account types**: Choose based on your needs
      - *Single tenant* - Only your organization
      - *Multitenant* - Any Azure AD organization
-   - **Redirect URI**: Select **Single-page application (SPA)** and enter:
-     ```
-     https://<your-extension-id>.chromiumapp.org/
-     ```
-5. After creation, copy the **Application (client) ID**
+5. Click **Register**
+
+### Step 2: Copy Client ID and Tenant ID
+
+After creating the app, copy the **Application (client) ID** and **Directory (tenant) ID** from the Overview page:
+
+<p align="center">
+  <img src="screenshots/ClientId-TenantId.png" alt="Client ID and Tenant ID" width="600">
+</p>
+
+### Step 3: Configure API Permissions
+
+The extension needs permission to access Power Automate APIs.
+
+1. Go to **API permissions** > Click **Add a permission**
+
+<p align="center">
+  <img src="screenshots/APIPermissions1.png" alt="API Permissions Step 1" width="600">
+</p>
+
+2. Select **Power Automate** (or search for "Flow Service") and add the required permissions:
+
+<p align="center">
+  <img src="screenshots/APIPermissions2.png" alt="API Permissions Step 2" width="600">
+</p>
+
+### Step 4: Configure Authentication (Redirect URI)
+
+1. Go to **Authentication** > Click **Add a platform**
+
+<p align="center">
+  <img src="screenshots/Authentication1.png" alt="Authentication Step 1" width="600">
+</p>
+
+2. Select **Web** and enter your extension's redirect URI:
+   ```
+   https://<your-extension-id>.chromiumapp.org/
+   ```
+
+<p align="center">
+  <img src="screenshots/Authentication2.png" alt="Authentication Step 2" width="600">
+</p>
 
 ### Finding Your Extension ID
+
 1. Go to `chrome://extensions/`
 2. Find "Dynamics 365 Flow History"
 3. Copy the ID shown below the extension name
 
-### Extension Configuration
+### Step 5: Configure the Extension
+
 1. Click the extension icon on a Dynamics 365 page
 2. Click the :gear: gear icon
 3. Enter your **Azure AD Client ID**
@@ -136,7 +176,7 @@ You need an Azure AD App Registration to use the record-specific run search feat
 | **Recent Failed** | Recent failed runs |
 | **Failed (This)** | :star: Failed runs for THIS record only |
 
-6. Click the **?** link on any run to **open it directly in Power Automate** for detailed debugging
+6. Click the **↗** link on any run to **open it directly in Power Automate** for detailed debugging
 
 ---
 
@@ -156,13 +196,13 @@ See [PRIVACY.md](PRIVACY.md) for full details.
 
 ### Project Structure
 ```
-??? manifest.json          # Extension manifest (V3)
-??? background.js          # Service worker (API calls, auth)
-??? injector.js            # Content script bridge (ISOLATED world)
-??? main_world_script.js   # Main UI & logic (MAIN world)
-??? popup.html/js          # Extension popup
-??? settings.html/js       # Options page
-??? icons/                 # Extension icons
+├── manifest.json          # Extension manifest (V3)
+├── background.js          # Service worker (API calls, auth)
+├── injector.js            # Content script bridge (ISOLATED world)
+├── main_world_script.js   # Main UI & logic (MAIN world)
+├── popup.html/js          # Extension popup
+├── settings.html/js       # Options page
+└── icons/                 # Extension icons
 ```
 
 ### Building
