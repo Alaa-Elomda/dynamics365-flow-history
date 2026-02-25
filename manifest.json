@@ -7,7 +7,6 @@
     "activeTab",
     "scripting",
     "storage",
-    "cookies",
     "identity"
   ],
   "host_permissions": [
