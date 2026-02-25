@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Dynamics 365 Flow History",
-  "version": "2.2",
+  "version": "2.2.1",
   "description": "View Power Automate flow runs for Dynamics 365 records. Find record-specific runs instantly.",
   "permissions": [
     "activeTab",
