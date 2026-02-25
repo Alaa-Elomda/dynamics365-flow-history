@@ -52,8 +52,7 @@ The Extension requires the following permissions:
 | `activeTab` | Access the current Dynamics 365 tab |
 | `scripting` | Inject the Flow Monitor UI |
 | `storage` | Store configuration settings locally |
-| `identity` | Authenticate with Microsoft |
-| `cookies` | Required for authentication flow |
+| `identity` | Authenticate with Microsoft via OAuth 2.0 |
 
 ## User Rights
 
