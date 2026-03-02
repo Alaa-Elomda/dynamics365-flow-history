@@ -1,6 +1,6 @@
 ﻿# Dynamics 365 Flow History Extension
 
-[![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Coming%20Soon-blue?logo=googlechrome)](https://chrome.google.com/webstore)
+[![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Available-blue?logo=googlechrome)](https://chromewebstore.google.com/detail/dynamics-365-flow-history/gogaoihholdamhahafnjpfaaogheklfk)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-green.svg)](https://developer.chrome.com/docs/extensions/mv3/)
 
@@ -73,7 +73,8 @@ Results appear as they're found - no waiting for the entire search to complete.
 ## :rocket: Installation
 
 ### From Chrome Web Store (Chrome & Edge)
-*Coming Soon*
+
+[![Install from Chrome Web Store](https://img.shields.io/badge/Install-Chrome%20Web%20Store-blue?style=for-the-badge&logo=googlechrome)](https://chromewebstore.google.com/detail/dynamics-365-flow-history/gogaoihholdamhahafnjpfaaogheklfk)
 
 > :bulb: **Edge Users:** You can install this extension directly from the Chrome Web Store. Go to `edge://extensions/`, enable "Allow extensions from other stores", then install from Chrome Web Store.
 
@@ -136,24 +137,26 @@ The extension needs permission to access Power Automate APIs.
 
 <img src="screenshots/Authentication1.png" alt="Authentication Step 1" width="500">
 
-2. Select **Web** and enter your extension's redirect URI:
-   ```
-   https://<your-extension-id>.chromiumapp.org/
-   ```
+2. Select **Web** and enter the extension's redirect URI:
+
+> :clipboard: **Copy this Redirect URI:**
+> ```
+> https://gogaoihholdamhahafnjpfaaogheklfk.chromiumapp.org/
+> ```
 
 <img src="screenshots/Authentication2.png" alt="Authentication Step 2" width="500">
 
-### Finding Your Extension ID
+### Extension ID (Fixed)
 
-#### Chrome
-1. Go to `chrome://extensions/`
-2. Find "Dynamics 365 Flow History"
-3. Copy the ID shown below the extension name
+The published extension has a **fixed ID** that won't change:
 
-#### Microsoft Edge
-1. Go to `edge://extensions/`
-2. Find "Dynamics 365 Flow History"
-3. Copy the ID shown below the extension name
+| Property | Value |
+|----------|-------|
+| **Extension ID** | `gogaoihholdamhahafnjpfaaogheklfk` |
+| **Redirect URI** | `https://gogaoihholdamhahafnjpfaaogheklfk.chromiumapp.org/` |
+| **Chrome Web Store** | [Install Link](https://chromewebstore.google.com/detail/dynamics-365-flow-history/gogaoihholdamhahafnjpfaaogheklfk) |
+
+> :warning: **Note:** If you're using the extension in Developer Mode (unpacked), your Extension ID will be different. You'll need to use your local Extension ID for the Redirect URI.
 
 ### Step 5: Configure the Extension
 

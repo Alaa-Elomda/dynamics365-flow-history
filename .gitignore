@@ -38,3 +38,6 @@ npm-debug.log*
 
 # Package files (if using npm for tooling)
 package-lock.json
+
+# Personal notes (not for repository)
+ARCHITECTURE_NOTES.md
