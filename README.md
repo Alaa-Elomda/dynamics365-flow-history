@@ -101,12 +101,12 @@ Results appear as they're found - no waiting for the entire search to complete.
 ## :gear: Configuration
 
 ### Prerequisites
-You need an Azure AD App Registration to use the record-specific run search feature.
+You need a Microsoft Entra ID (Azure AD) App Registration to use the record-specific run search feature.
 
-### Step 1: Create Azure AD App Registration
+### Step 1: Create App Registration
 
 1. Go to [Azure Portal](https://portal.azure.com)
-2. Navigate to **Azure Active Directory** > **App registrations**
+2. Search for **App registrations** in the search bar
 3. Click **New registration**
 4. Configure:
    - **Name**: `Flow History Extension` (or your choice)

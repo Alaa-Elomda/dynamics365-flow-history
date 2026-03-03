@@ -20,11 +20,12 @@ Get the Dynamics 365 Flow History Extension running in **5 minutes**.
 ## Step 2: Create Azure AD App (One-Time Setup)
 
 ### A. Register the App
-1. Go to [Azure Portal](https://portal.azure.com) > **Azure Active Directory** > **App registrations**
-2. Click **"+ New registration"**
-3. Name it `Flow History Extension`
-4. Select **"Accounts in this organizational directory only"** (or multi-tenant if needed)
-5. Click **Register**
+1. Go to [Azure Portal](https://portal.azure.com)
+2. Search for **App registrations** in the search bar
+3. Click **"+ New registration"**
+4. Name it `Flow History Extension`
+5. Select **"Accounts in this organizational directory only"** (or multi-tenant if needed)
+6. Click **Register**
 
 ### B. Copy Your IDs
 From the Overview page, copy:

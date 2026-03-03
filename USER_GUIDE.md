@@ -60,12 +60,12 @@ Before using this extension, you need:
 
 ## Azure AD App Setup
 
-The extension requires an Azure AD App Registration to authenticate with Power Automate APIs. Follow these steps:
+The extension requires a Microsoft Entra ID (Azure AD) App Registration to authenticate with Power Automate APIs. Follow these steps:
 
 ### Step 1: Create the App Registration
 
 1. Go to [Azure Portal](https://portal.azure.com)
-2. Navigate to **Azure Active Directory** > **App registrations**
+2. Search for **App registrations** in the search bar
 3. Click **"+ New registration"**
 4. Fill in the details:
    - **Name:** `Flow History Extension` (or any name you prefer)
