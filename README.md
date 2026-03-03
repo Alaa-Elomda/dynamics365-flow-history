@@ -2,6 +2,7 @@
 
 [![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Available-blue?logo=googlechrome)](https://chromewebstore.google.com/detail/dynamics-365-flow-history/gogaoihholdamhahafnjpfaaogheklfk)
 [![Quick Start](https://img.shields.io/badge/Quick%20Start-Guide-green?logo=rocket)](QUICK_START.md)
+[![Configuration](https://img.shields.io/badge/Configuration-Setup-orange)](README.md#gear-configuration)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-green.svg)](https://developer.chrome.com/docs/extensions/mv3/)
 
