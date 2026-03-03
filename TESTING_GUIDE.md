@@ -27,24 +27,24 @@
 3. Verify settings page opens correctly
 
 4. Test validation - try saving WITHOUT entering Client ID
-   ? Should show error: "Client ID is required"
+   -> Should show error: "Client ID is required"
 
 5. Try entering invalid Client ID: "test123"
-   ? Should show error: "Invalid Client ID format"
+   -> Should show error: "Invalid Client ID format"
 
 6. Enter valid Client ID: "12345678-1234-1234-1234-123456789abc"
 
 7. Try invalid Tenant ID: "invalid"
-   ? Should show error: "Invalid Tenant ID. Use 'common' or a valid GUID."
+   -> Should show error: "Invalid Tenant ID. Use 'common' or a valid GUID."
 
 8. Leave Tenant ID empty or enter "common"
 9. Click Save Settings
-   ? Should show success message
+   -> Should show success message
 ```
 
 ### 3. Settings Page Test
 ```
-1. Right-click extension icon ? "Extension options"
+1. Right-click extension icon > "Extension options"
 2. Verify settings.html loads correctly
 3. Test same validation as above
 4. Verify saved values persist after page reload
@@ -65,7 +65,7 @@
    - Title: "Flow Monitor"
    - Current entity name
    - Current record ID (without braces)
-   - Close button (×)
+   - Close button (X)
 
 2. Verify three tabs appear:
    - Triggered By (active by default)
@@ -77,8 +77,8 @@
    - Search input field
 
 4. Wait for flows to load
-   ? Should show "Scanning..." initially
-   ? Should populate with flows or show "No flows found"
+   -> Should show "Scanning..." initially
+   -> Should populate with flows or show "No flows found"
 ```
 
 ### 6. Flow Card Test
@@ -91,129 +91,129 @@ For each flow card, verify:
 4. Active flows marked with green pill
 
 5. Four buttons present:
-   - "? Recent Runs" (gray outline)
-   - "? This Record" (green)
-   - "? Recent Failed" (red outline)
-   - "?? Failed (This)" (red)
+   - "Recent Runs" (gray outline)
+   - "This Record" (green)
+   - "Recent Failed" (red outline)
+   - "Failed (This)" (red)
 ```
 
 ### 7. Recent Runs Button Test
 ```
-1. Click "? Recent Runs" button on any flow
-   ? Button should disable and show "? Loading..."
-   ? Run list should appear below card
-   ? Button should re-enable after load
-   ? Should show up to 50 recent runs from Dataverse
+1. Click "Recent Runs" button on any flow
+   -> Button should disable and show "Loading..."
+   -> Run list should appear below card
+   -> Button should re-enable after load
+   -> Should show up to 50 recent runs from Dataverse
 2. Click same button again
-   ? Should toggle (hide) the run list
+   -> Should toggle (hide) the run list
 ```
 
 ### 8. Record-Specific Runs Test (Streaming)
 ```
-1. Click "? This Record" button
-   ? Button should disable and show "? Starting..."
-   ? Should show streaming UI with:
+1. Click "This Record" button
+   -> Button should disable and show "Starting..."
+   -> Should show streaming UI with:
      - Progress text: "Initializing search..."
-     - Settings gear icon (?)
+     - Settings gear icon
      - Stop Search button (red)
-   ? Button re-enables after stream starts
+   -> Button re-enables after stream starts
 
 2. Watch progress
-   ? Should update: "Scanned X runs..."
-   ? Should find relevant runs and display them
-   ? Should show "Search complete" when done
+   -> Should update: "Scanned X runs..."
+   -> Should find relevant runs and display them
+   -> Should show "Search complete" when done
 
 3. Test Stop button
-   ? Should disable and show "Stopping..."
-   ? Should halt the search
-   ? Should show "Search stopped by user"
+   -> Should disable and show "Stopping..."
+   -> Should halt the search
+   -> Should show "Search stopped by user"
 ```
 
 ### 9. Navigation Test (Context Refresh)
 ```
 1. With panel open, navigate to a different record
 2. Wait up to 1.5 seconds (1s poll + 500ms debounce)
-   ? Header should update with new entity/ID
-   ? All tabs should show "Rescanning..."
-   ? Flow lists should refresh for new record
+   -> Header should update with new entity/ID
+   -> All tabs should show "Rescanning..."
+   -> Flow lists should refresh for new record
 
 3. Navigate back to home/grid (no record)
-   ? Header should show "No Record Selected" and "—"
-   ? Tabs should show "Please open a record to view flows."
+   -> Header should show "No Record Selected" and "-"
+   -> Tabs should show "Please open a record to view flows."
 ```
 
 ### 10. Cleanup Test (Memory Leak Prevention)
 ```
 1. Open panel on a Dynamics record
-2. Click close button (×)
-   ? Panel should remove from DOM
-   ? Navigation poller should stop (no more console activity)
+2. Click close button (X)
+   -> Panel should remove from DOM
+   -> Navigation poller should stop (no more console activity)
 
 3. Re-open panel
-   ? Should work normally
-   ? Fresh poller should start
+   -> Should work normally
+   -> Fresh poller should start
 ```
 
 ### 11. Filter & Search Test
 ```
 1. Change Status filter:
    - Select "Active"
-     ? Should show only active flows
+     -> Should show only active flows
    - Select "Draft"
-     ? Should show only draft flows
+     -> Should show only draft flows
    - Select "All"
-     ? Should show all flows
+     -> Should show all flows
 
 2. Use search box:
    - Type partial flow name
-     ? Should filter flows in real-time
-     ? Should update count badges: "Triggered By (X)"
+     -> Should filter flows in real-time
+     -> Should update count badges: "Triggered By (X)"
    - Clear search
-     ? Should show all flows again
+     -> Should show all flows again
 ```
 
 ### 12. OAuth Error Recovery Test
 ```
 1. With panel open, manually clear Chrome identity cache:
-   - Open DevTools ? Application ? Storage ? Clear site data
+   - Open DevTools > Application > Storage > Clear site data
 
-2. Click "? This Record" button
-   ? If auth fails, should show inline config form
-   ? Should pre-fill existing Client/Tenant ID
-   ? "Save & Retry" button should work
-   ? Should re-attempt streaming after save
+2. Click "This Record" button
+   -> If auth fails, should show inline config form
+   -> Should pre-fill existing Client/Tenant ID
+   -> "Save & Retry" button should work
+   -> Should re-attempt streaming after save
 
-OR manually test gear (?) button:
-   ? Should show config form
-   ? Cancel button should restart stream
+OR manually test gear button:
+   -> Should show config form
+   -> Cancel button should restart stream
 ```
 
 ### 13. Button State Test (Double-Click Prevention)
 ```
-1. Click "? Recent Runs" button rapidly 3 times
-   ? Should only execute once
-   ? Button should be disabled during load
-   ? Should re-enable after completion
+1. Click "Recent Runs" button rapidly 3 times
+   -> Should only execute once
+   -> Button should be disabled during load
+   -> Should re-enable after completion
 
 2. Same test for all 4 buttons on each card
-   ? All should prevent double-click
-   ? All should show loading state
-   ? All should restore original state
+   -> All should prevent double-click
+   -> All should show loading state
+   -> All should restore original state
 ```
 
 ### 14. Error Handling Test
 ```
 1. Test with invalid environment (no network)
-   ? Should show error message
-   ? Should not crash
-   ? Should allow retry
+   -> Should show error message
+   -> Should not crash
+   -> Should allow retry
 
 2. Test with invalid record ID
-   ? Should handle gracefully
-   ? Should show empty results or error
+   -> Should handle gracefully
+   -> Should show empty results or error
 
 3. Test on non-Dynamics page (e.g., google.com)
-   ? Should show alert: "Please navigate to a Dynamics 365 record"
+   -> Should show alert: "Please navigate to a Dynamics 365 record"
 ```
 
 ---
@@ -257,8 +257,8 @@ const DEBUG = true;
 2. Reload extension
 3. Perform same actions
 4. Verify NO console logs appear
-   ? Only errors should appear (console.error)
-   ? User-facing messages should still work
+   -> Only errors should appear (console.error)
+   -> User-facing messages should still work
 ```
 
 ---
@@ -285,11 +285,12 @@ const DEBUG = true;
 ---
 
 ## Browser Compatibility
-? **Tested & Supported:**
+
+**Tested & Supported:**
 - Chrome 100+
 - Microsoft Edge 100+
 
-?? **Not Tested:**
+**Not Tested:**
 - Firefox (different extension API)
 - Safari (different extension API)
 - Older browser versions (< 100)
@@ -298,13 +299,13 @@ const DEBUG = true;
 
 ## Passing Criteria
 Extension is production-ready if:
-- ? All 14 test sections pass
-- ? No console errors in production mode (DEBUG = false)
-- ? No memory leaks (poller cleanup verified)
-- ? All buttons have proper loading states
-- ? All inputs have validation
-- ? OAuth retry works automatically
-- ? Navigation context updates correctly
+- All 14 test sections pass
+- No console errors in production mode (DEBUG = false)
+- No memory leaks (poller cleanup verified)
+- All buttons have proper loading states
+- All inputs have validation
+- OAuth retry works automatically
+- Navigation context updates correctly
 
 ---
 
@@ -340,4 +341,4 @@ RECOMMENDATION: APPROVE / NEEDS FIXES
 
 ---
 
-*Happy Testing!* ????
+*Happy Testing!*

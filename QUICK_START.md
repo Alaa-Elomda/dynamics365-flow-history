@@ -1,4 +1,4 @@
-# ? Quick Start Guide
+# Quick Start Guide
 
 Get the Dynamics 365 Flow History Extension running in **5 minutes**.
 
@@ -20,7 +20,7 @@ Get the Dynamics 365 Flow History Extension running in **5 minutes**.
 ## Step 2: Create Azure AD App (One-Time Setup)
 
 ### A. Register the App
-1. Go to [Azure Portal](https://portal.azure.com) ? **Azure Active Directory** ? **App registrations**
+1. Go to [Azure Portal](https://portal.azure.com) > **Azure Active Directory** > **App registrations**
 2. Click **"+ New registration"**
 3. Name it `Flow History Extension`
 4. Select **"Accounts in this organizational directory only"** (or multi-tenant if needed)
@@ -28,24 +28,24 @@ Get the Dynamics 365 Flow History Extension running in **5 minutes**.
 
 ### B. Copy Your IDs
 From the Overview page, copy:
-- ? **Application (client) ID** ? `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`
-- ? **Directory (tenant) ID** ? `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`
+- **Application (client) ID** - `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`
+- **Directory (tenant) ID** - `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`
 
 ### C. Add Redirect URI
-1. Go to **Authentication** ? **Add a platform** ? **Web**
+1. Go to **Authentication** > **Add a platform** > **Web**
 2. Enter this redirect URI (for Chrome Web Store version):
    ```
    https://gogaoihholdamhahafnjpfaaogheklfk.chromiumapp.org/
    ```
-   > ?? If using Developer Mode, find your extension ID at `chrome://extensions/` and use: `https://YOUR-EXTENSION-ID.chromiumapp.org/`
+   > **Note:** If using Developer Mode, find your extension ID at `chrome://extensions/` and use: `https://YOUR-EXTENSION-ID.chromiumapp.org/`
 
-3. Check ? **Access tokens** and ? **ID tokens**
+3. Check **Access tokens** and **ID tokens**
 4. Click **Save**
 
 ### D. Add API Permission
-1. Go to **API permissions** ? **Add a permission**
-2. Select **APIs my organization uses** ? Search **"Power Automate"** or **"Flow Service"**
-3. Select **Delegated permissions** ? Check available permissions
+1. Go to **API permissions** > **Add a permission**
+2. Select **APIs my organization uses** > Search **"Power Automate"** or **"Flow Service"**
+3. Select **Delegated permissions** > Check available permissions
 4. Click **Add permissions**
 
 ---
@@ -67,7 +67,7 @@ From the Overview page, copy:
 2. Click the **extension icon**
 3. The **Flow Monitor** panel opens automatically
 4. Sign in with your Microsoft account when prompted
-5. View your flows! ??
+5. View your flows!
 
 ---
 
@@ -98,4 +98,4 @@ See the full [USER_GUIDE.md](USER_GUIDE.md) for detailed instructions and troubl
 
 ---
 
-*Setup complete! Enjoy faster flow debugging.* ??
+*Setup complete! Enjoy faster flow debugging.*

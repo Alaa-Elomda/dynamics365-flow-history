@@ -1,6 +1,6 @@
 # Dynamics 365 Flow History Extension - User Guide
 
-## ?? Table of Contents
+## Table of Contents
 1. [Overview](#overview)
 2. [Prerequisites](#prerequisites)
 3. [Installation](#installation)
@@ -20,12 +20,12 @@ The **Dynamics 365 Flow History Extension** (Flow Monitor) is a Chrome/Edge brow
 
 ### What Can It Do?
 
-- ?? **Find flows triggered by** the current entity (e.g., when a Contact is created/modified)
-- ?? **Find flows that update** the current entity
-- ?? **Find flows that read** the current entity
-- ?? **View run history** for any flow
-- ?? **Search runs for the specific record** you're viewing
-- ? **Find failed runs** quickly for troubleshooting
+- **Find flows triggered by** the current entity (e.g., when a Contact is created/modified)
+- **Find flows that update** the current entity
+- **Find flows that read** the current entity
+- **View run history** for any flow
+- **Search runs for the specific record** you're viewing
+- **Find failed runs** quickly for troubleshooting
 
 ---
 
@@ -33,10 +33,10 @@ The **Dynamics 365 Flow History Extension** (Flow Monitor) is a Chrome/Edge brow
 
 Before using this extension, you need:
 
-1. ? **Google Chrome or Microsoft Edge browser**
-2. ? **Access to a Dynamics 365 environment** (CRM Online)
-3. ? **Access to Power Automate** in the same environment
-4. ? **An Azure AD App Registration** (see [Azure AD App Setup](#azure-ad-app-setup))
+1. **Google Chrome or Microsoft Edge browser**
+2. **Access to a Dynamics 365 environment** (CRM Online)
+3. **Access to Power Automate** in the same environment
+4. **An Azure AD App Registration** (see [Azure AD App Setup](#azure-ad-app-setup))
 
 ---
 
@@ -46,7 +46,7 @@ Before using this extension, you need:
 
 [![Install from Chrome Web Store](https://img.shields.io/badge/Install-Chrome%20Web%20Store-blue?style=for-the-badge&logo=googlechrome)](https://chromewebstore.google.com/detail/dynamics-365-flow-history/gogaoihholdamhahafnjpfaaogheklfk)
 
-> ?? **Edge Users:** You can install directly from Chrome Web Store. Go to `edge://extensions/`, enable "Allow extensions from other stores", then install.
+> **Edge Users:** You can install directly from Chrome Web Store. Go to `edge://extensions/`, enable "Allow extensions from other stores", then install.
 
 ### Option 2: Install from Source (Developer Mode)
 1. Download or clone the extension files to a folder on your computer
@@ -65,7 +65,7 @@ The extension requires an Azure AD App Registration to authenticate with Power A
 ### Step 1: Create the App Registration
 
 1. Go to [Azure Portal](https://portal.azure.com)
-2. Navigate to **Azure Active Directory** ? **App registrations**
+2. Navigate to **Azure Active Directory** > **App registrations**
 3. Click **"+ New registration"**
 4. Fill in the details:
    - **Name:** `Flow History Extension` (or any name you prefer)
@@ -114,8 +114,8 @@ The extension requires an Azure AD App Registration to authenticate with Power A
 
 1. Go to **Authentication**
 2. Under **Implicit grant and hybrid flows**, check:
-   - ? **Access tokens**
-   - ? **ID tokens**
+   - **Access tokens**
+   - **ID tokens**
 3. Click **"Save"**
 
 ---
@@ -168,7 +168,7 @@ The extension panel shows:
 ### Header Section
 ```
 +---------------------------------------+
-|  ? Flow Monitor              [X]     |
+|  Flow Monitor                    [X]  |
 |  Entity: contact | ID: abc-123...     |
 +---------------------------------------+
 ```
@@ -192,7 +192,7 @@ The extension panel shows:
 ### Toolbar
 ```
 +---------------------------------------+
-| Status: [All ?]   [?? Search flows]   |
+| Status: [All v]   [ Search flows ]    |
 +---------------------------------------+
 ```
 - **Status Filter:** Show All, Active only, or Draft only
@@ -204,7 +204,7 @@ The extension panel shows:
 | My Flow Name                [Active]  |
 | [System] [Create or Update]           |
 |                                       |
-| ? Open in Maker                       |
+| -> Open in Maker                      |
 | +--------------+ +--------------+     |
 | |Recent Runs   | |This Record   |     |
 | +--------------+ +--------------+     |
@@ -218,28 +218,28 @@ The extension panel shows:
 
 ## Features Explained
 
-### ? Open in Maker
-Click **"? Open in Maker"** to open the flow in Power Automate portal where you can view/edit the flow definition.
+### Open in Maker
+Click **"Open in Maker"** to open the flow in Power Automate portal where you can view/edit the flow definition.
 
-### ? Recent Runs
+### Recent Runs
 Shows the **most recent runs** for this flow (not filtered by record).
 - Quick overview of flow activity
 - Shows status (Succeeded/Failed/Running)
 - Click any run to open in Power Automate
 
-### ? This Record
+### This Record
 **Searches all runs** to find those related to the **specific record** you're viewing.
 - Uses streaming - results appear as they're found
 - Checks trigger data and action inputs
 - May take time for flows with many runs
 - Click **"Stop Search"** to cancel
 
-### ? Recent Failed
+### Recent Failed
 Shows **recent failed runs** for this flow (not filtered by record).
 - Quick way to find errors
 - Useful for troubleshooting
 
-### ?? Failed (This)
+### Failed (This)
 Searches for **failed runs related to this specific record**.
 - Combines record filtering with failure filtering
 - Best for troubleshooting issues with a specific record
@@ -253,7 +253,7 @@ Searches for **failed runs related to this specific record**.
 **Problem:** The extension doesn't have Azure AD credentials.
 
 **Solution:**
-1. Right-click extension icon ? **Extension options**
+1. Right-click extension icon > **Extension options**
 2. Enter your Azure AD Client ID
 3. Enter Tenant ID if using single-tenant app
 4. Save and retry
@@ -357,7 +357,7 @@ No data is sent to any third-party servers.
 
 If you encounter issues not covered in this guide:
 
-1. Check the browser console (F12 ? Console) for error messages
+1. Check the browser console (F12 > Console) for error messages
 2. See [TESTING_GUIDE.md](TESTING_GUIDE.md) for detailed testing steps
 3. Review [README.md](README.md) for setup instructions
 
@@ -377,8 +377,8 @@ If you encounter issues not covered in this guide:
 | Find runs for this record | Click "This Record" button |
 | View failed runs | Click "Recent Failed" button |
 | Find failures for this record | Click "Failed (This)" button |
-| Open flow in maker | Click "? Open in Maker" link |
-| Configure settings | Right-click icon ? Extension options |
+| Open flow in maker | Click "Open in Maker" link |
+| Configure settings | Right-click icon > Extension options |
 | Close panel | Click X in header |
 
 ---
