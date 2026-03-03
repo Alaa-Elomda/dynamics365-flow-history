@@ -18,7 +18,7 @@ A browser extension for **Chrome** and **Edge** that allows you to view Power Au
 3. Scroll through hundreds/thousands of runs
 4. Manually check each run to find the one related to your record
 
-**The Solution:** This extension finds flow runs **for the specific record you're viewing** in seconds, and lets you **open them directly in Power Automate** to debug the issue.
+**The Solution:** This extension finds flow runs **for the specific record you're viewing** and lets you **open them directly in Power Automate** to debug the issue.
 
 > :stopwatch: **Save hours of troubleshooting time** - No more searching through thousands of flow runs!
 
@@ -160,8 +160,11 @@ The published extension has a **fixed ID** that won't change:
 
 ### Step 5: Configure the Extension
 
-1. Click the extension icon on a Dynamics 365 page
-2. Click the :gear: gear icon
+1. **Right-click** the extension icon in Chrome/Edge toolbar
+2. Click **Extension options** (or go to `chrome://extensions/` → Find the extension → **Details** → **Extension options**)
+
+<img src="screenshots/Flow History Extension Settings.png" alt="Extension Settings" width="400">
+
 3. Enter your **Azure AD Client ID**
 4. (Optional) Enter your **Tenant ID** or leave blank for "common"
 5. Click **Save Settings**
