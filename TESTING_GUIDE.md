@@ -1,38 +1,50 @@
-# Testing Guide - Dynamics 365 Flow History Extension v2.2
+# Testing Guide - Dynamics 365 Flow History Extension v2.2.1
 
 ## Quick Start Testing
 
 ### 1. Load Extension in Chrome
+
+**Option A: From Chrome Web Store**
+```
+1. Go to: https://chromewebstore.google.com/detail/dynamics-365-flow-history/gogaoihholdamhahafnjpfaaogheklfk
+2. Click "Add to Chrome"
+3. Confirm installation
+```
+
+**Option B: Developer Mode (Local)**
 ```
 1. Open Chrome and go to: chrome://extensions/
 2. Enable "Developer mode" (toggle in top right)
 3. Click "Load unpacked"
-4. Select the extension folder: D:\Flow History Extension\FlowHistoryExtension\
-5. Verify extension appears with version 2.2
+4. Select the extension folder
+5. Verify extension appears with correct version
 ```
 
 ### 2. Initial Configuration Test
 ```
-1. Click extension icon in Chrome toolbar
-2. Verify popup appears
-3. If no configuration exists, should see Settings view
-4. Try saving WITHOUT entering Client ID
+1. Right-click extension icon in toolbar
+2. Click "Extension options"
+3. Verify settings page opens correctly
+
+4. Test validation - try saving WITHOUT entering Client ID
    ? Should show error: "Client ID is required"
+
 5. Try entering invalid Client ID: "test123"
    ? Should show error: "Invalid Client ID format"
+
 6. Enter valid Client ID: "12345678-1234-1234-1234-123456789abc"
+
 7. Try invalid Tenant ID: "invalid"
    ? Should show error: "Invalid Tenant ID. Use 'common' or a valid GUID."
+
 8. Leave Tenant ID empty or enter "common"
 9. Click Save Settings
-   ? Button should show "Saving..." and be disabled
    ? Should show success message
-   ? Should auto-redirect to launch view after 800ms
 ```
 
 ### 3. Settings Page Test
 ```
-1. Right-click extension icon ? Options
+1. Right-click extension icon ? "Extension options"
 2. Verify settings.html loads correctly
 3. Test same validation as above
 4. Verify saved values persist after page reload
@@ -43,11 +55,8 @@
 1. Navigate to a Dynamics 365 environment (*.crm.dynamics.com)
 2. Open any record (e.g., Account, Contact, Opportunity)
 3. Click extension icon
-4. Verify popup shows launch view (not settings)
-5. Verify button says "Open Flow Monitor" (not "Only for Dynamics 365")
-6. Click "Open Flow Monitor"
-   ? Button should show "Opening..." and be disabled
-   ? Panel should appear on right side of screen
+4. Panel should appear on right side of screen
+5. Verify header shows correct entity and record ID
 ```
 
 ### 5. Main Panel Test
@@ -204,9 +213,18 @@ OR manually test gear (?) button:
    ? Should show empty results or error
 
 3. Test on non-Dynamics page (e.g., google.com)
-   ? Popup should show "Only for Dynamics 365"
-   ? Launch button should be disabled
+   ? Should show alert: "Please navigate to a Dynamics 365 record"
 ```
+
+---
+
+## Extension Info (Fixed)
+
+| Property | Value |
+|----------|-------|
+| **Extension ID** | `gogaoihholdamhahafnjpfaaogheklfk` |
+| **Redirect URI** | `https://gogaoihholdamhahafnjpfaaogheklfk.chromiumapp.org/` |
+| **Chrome Web Store** | [Install Link](https://chromewebstore.google.com/detail/dynamics-365-flow-history/gogaoihholdamhahafnjpfaaogheklfk) |
 
 ---
 
@@ -269,12 +287,12 @@ const DEBUG = true;
 ## Browser Compatibility
 ? **Tested & Supported:**
 - Chrome 100+
-- Edge 100+
+- Microsoft Edge 100+
 
 ?? **Not Tested:**
 - Firefox (different extension API)
 - Safari (different extension API)
-- Older Chrome versions (< 100)
+- Older browser versions (< 100)
 
 ---
 
@@ -295,7 +313,7 @@ Extension is production-ready if:
 ```
 TESTER: _______________
 DATE: _______________
-VERSION: 2.2
+VERSION: 2.2.1
 
 [ ] 1. Load Extension - PASS / FAIL
 [ ] 2. Initial Configuration - PASS / FAIL
@@ -322,4 +340,4 @@ RECOMMENDATION: APPROVE / NEEDS FIXES
 
 ---
 
-*Happy Testing!* ??
+*Happy Testing!* ????
